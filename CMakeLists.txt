@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.9)
+set(CMAKE_CUDA_COMPILER /usr/local/cuda/bin/nvcc)
+project(cuda_example LANGUAGES CXX CUDA)
+set(BUILD_DIR build)
+set(CMAKE_CUDA_FLAGS ${CMAKE_CUDA_FLAGS} "--cudart static --relocatable-device-code=false -gencode arch=compute_50,code=compute_50 -gencode arch=compute_50,code=sm_50")
+add_executable(${PROJECT_NAME} main.cu)

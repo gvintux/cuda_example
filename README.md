@@ -11,7 +11,9 @@ integrate f(x) on [a;b] using NVIDIA CUDA
 
 ## Build
 
-* run `make` in project root
+* change dir to `build`
+* run `cmake ..`
+* run `make`
 
 ## Run
 
